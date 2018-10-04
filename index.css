@@ -1,0 +1,27 @@
+#titleBox{
+  width:50%;
+  height: 10%;
+  /* border: 2px solid; */
+  margin: 5% auto;
+  font-family: verdana;
+  font-size: 3em;
+}
+
+#playButt{
+  height: 200px;
+  width: 200px;
+  margin: 10%;
+  margin-left: 15%;
+}
+
+#pauseButt{
+  height: 200px;
+  width: 200px;
+    margin: 10%;
+}
+
+#nextButt{
+  height: 200px;
+  width: 200px;
+    margin: 10%;
+}

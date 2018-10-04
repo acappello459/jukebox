@@ -4,7 +4,7 @@ var pause = document.getElementById('pauseButt');
 
 var next = document.getElementById('nextButt');
 
-var titleBox = document.createElement('div')
+var titleBox = document.getElementById('titleBox')
 
 //
 //
@@ -36,21 +36,22 @@ var titleBox = document.createElement('div')
 // titleBox.style.textAlign = 'center'
 // document.body.appendChild(titleBox)
 
-// titleBox.style
-
 play.addEventListener('click', function(){
   a.playAudio()
-  titleBox.innerHTML(a.playlist.title)
+  titleBox.innerHTML = a.playlist[a.songNum].title + ' - '+a.playlist[a.songNum].artist;
 });
 // var currentSong = new Audio('audio_files/The_One.mp3')
 
 pause.addEventListener('click', function(){
   a.pauseAudio()
+  titleBox.innerHTML ='SONG PAUSED'
 });
 next.addEventListener('click', function(){
   a.nextAudio()
   a.playAudio()
-});
+titleBox.innerHTML = a.playlist[a.songNum].title + ' - '+a.playlist[a.songNum].artist;});
+
+titleBox.style.textAlign = 'center'
 
 class Song{
   constructor(title, url, artist){
@@ -103,11 +104,5 @@ a.addSongs(song4)
 a.addSongs(song5)
 a.addSongs(song6)
 
-// $('.next').click(function(){
-//   $(this).css('background', 'red')
-// })
-// for(let i = 0; i<a.playlist.length; i++)
 
-
-
-// var songArray = [song1, song2, song3, song4, song5, song6]
+// this.titleAppear =
